@@ -1,7 +1,6 @@
 === My Profiles ===
 
 Contributors: anantshri
-Donate link: http://anantshri.info/index.php?page=wpprofiles
 Tags: myprofiles,social profile,networking, social networking, widget
 Requires at least: 2.6
 Tested up to: 2.8.4

@@ -3,7 +3,7 @@
 Plugin Name: My profiles
 Author URI: http://anantshri.info
 Plugin URI: http://anantshri.info/index.php?page=wpprofiles
-Version: v1.00
+Version: v0.5
 Author: Anant Shrivastava
 Description: this plugin provides a sleek and easy way to list all your profiles and to let others connect with you. So activate and visit the <a href="options-general.php?page=myprofiles">Settings Page</a>.
 */
