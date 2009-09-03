@@ -72,5 +72,10 @@ If in case of doubt feel free to contact me or post message at the forum.
 2. Admin panel of myprofiles
 
 == Changelog ==
+= Version 0.6 =
+
+1. XHTML compliance
+2. option to use functioon directly using function call and no widget option.
+
 
 Initial Release
