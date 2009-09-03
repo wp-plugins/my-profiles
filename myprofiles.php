@@ -3,8 +3,8 @@
 Plugin Name: My profiles
 Author URI: http://anantshri.info
 Plugin URI: http://anantshri.info/index.php?page=wpprofiles
-Version: v0.5
-Author: Anant Shrivastava
+Version: v1.00
+Author: <a href="http://anantshri.info/index.php?page=wpprofiles">Anant Shrivastava</a>
 Description: this plugin provides a sleek and easy way to list all your profiles and to let others connect with you. So activate and visit the <a href="options-general.php?page=myprofiles">Settings Page</a>.
 */
 ?>
@@ -47,11 +47,12 @@ To edit the options for this widget, please visit the <a href="options-general.p
 function widget_myprofiles()
 {
 include('myprofiles_sidebar.php');
+//show_myprofiles();
 }
 // this is the initialization phase
 function myprofile_init()
 {
-//echo "Hello";
+//echo "Hello"
 global $myprofiles;
 register_sidebar_widget(__('My Profiles'), 'widget_myprofiles');
 register_widget_control('My Profiles', 'widget_myprofiles_control');

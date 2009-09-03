@@ -1,6 +1,7 @@
 === My Profiles ===
 
 Contributors: anantshri
+Donate link: http://anantshri.info/index.php?page=wpprofiles
 Tags: myprofiles,social profile,networking, social networking, widget
 Requires at least: 2.6
 Tested up to: 2.8.4
@@ -55,12 +56,12 @@ Example
 	)
 `
 
-Just Replace `<website_name>` with your website name <br /> 
+Just Replace <website_name> with your website name <br /> 
 place 16 x 16 pixel large image of website "preferably FAVICON" in `plugins/myprofiles/img` folder.<br /> 
-Just replace `<profile_url>` with your personal url but change your nickname / profile_number to `NAME`<br /> 
+Just replace <profile_url> with your personal url but change your nickname / profile_number to `NAME`<br /> 
 and voila your new profile is in the admin interface just add your nick and you are good to go<br /> 
 <br /> 
-example for profile_url `http://www.twitter.com/anantshri` will be converted to `http://www.twitter.com/NAME`
+example for profile_url => `http://www.twitter.com/anantshri` will be converted to `http://www.twitter.com/NAME`
 <br /> <br /> 
 If in case of doubt feel free to contact me or post message at the forum.
 
