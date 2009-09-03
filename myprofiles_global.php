@@ -16,7 +16,7 @@ function show_myprofiles()
 		if(get_option($nm))
 		{
 ?>
-			<a href="<?php echo $url; ?>" title="<?php echo $site ?>" target="_blank"><div id="myprofiles_<?php  echo $count_profile; ?>"><img border="0" src="<?php echo $myprofiles_path . $img;?>" /></div></a> 
+			<div id="myprofiles_<?php  echo $count_profile; ?>"><a href="<?php echo $url; ?>" title="<?php echo $site ?>" target="_blank"><img border="0" src="<?php echo $myprofiles_path . $img;?>" alt="<?php echo $site; ?>" /></a></div> 
 <?php
 			$count_profile = $count_profile + 1;
 		}
