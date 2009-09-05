@@ -5,9 +5,12 @@ Donate link: http://anantshri.info/index.php?page=wpprofiles
 Tags: myprofiles,social profile,networking, social networking, widget
 Requires at least: 2.6
 Tested up to: 2.8.4
-Stable tag: 0.5
+Stable tag: 0.6
+
 
 Plugin to provides a sleek and easy way to list all your public profiles and to let others connect with you
+
+
 
 == Description ==
 
@@ -22,6 +25,7 @@ without the troubles of remembering various nicknames all the time
 Some of  the salient features of this plugin
 
 * Simple hassle free widget + admin panel to add websites.
+* for those not having widget enabled theme or don't want to use widget we now have function call enabled.
 * If your favourite site is missing its as easy as 1 2 3 to add your website in the list [refer 
 FAQ section].
 
@@ -65,17 +69,25 @@ example for profile_url => `http://www.twitter.com/anantshri` will be converted 
 <br /> <br /> 
 If in case of doubt feel free to contact me or post message at the forum.
 
+= how to use this plugin without widget =
+
+With version 0.6 you can eassily use this plugin even without using widget interface.
+
+in order to use this you just have to call `show_myprofiles()` anywhere inside the body or footer.
+
 
 == Screenshots ==
-
 1. Screen shot of working my profiles plugin on my site
+
 2. Admin panel of myprofiles
 
+
 == Changelog ==
+
 = Version 0.6 =
 
 1. XHTML compliance
-2. option to use functioon directly using function call and no widget option.
+2. option to directly add using function call reducing dependency on widget option. [refer FAQ section on how to use it].
 
 
 Initial Release
