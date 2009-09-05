@@ -5,7 +5,7 @@ Donate link: http://anantshri.info/index.php?page=wpprofiles
 Tags: myprofiles,social profile,networking, social networking, widget
 Requires at least: 2.6
 Tested up to: 2.8.4
-Stable tag: 0.5
+Stable tag: 0.6
 
 
 Plugin to provides a sleek and easy way to list all your public profiles and to let others connect with you
