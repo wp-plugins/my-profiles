@@ -3,9 +3,9 @@ function show_myprofiles()
 {
 				global $myprofiles_path; 
 				global $myprofiles;
-				echo $before_widget;  
-				echo $before_title;
-				echo $after_title;
+//				echo $before_widget;  
+	//			echo $before_title;
+		//		echo $after_title;
 	$count_profile = 1;
 	foreach($myprofiles as $site=>$details)
 	{
@@ -28,6 +28,8 @@ function show_myprofiles()
 	$count_profile = 0;
 }
 ?>		 
+
+
 <?php
 $myprofiles = Array(
 	"43things" => Array(
