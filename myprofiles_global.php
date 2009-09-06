@@ -1,28 +1,26 @@
 <?php
 function show_myprofiles()
 {
-				global $myprofiles_path; 
-				global $myprofiles;
-				echo $before_widget;  
-				echo $before_title;
-				echo $after_title;
+	global $myprofiles_path; 
+	global $myprofiles;
 	$count_profile = 1;
 	foreach($myprofiles as $site=>$details)
 	{
 		$nm = $details['name'];
 		$uri = $details['url'];
 		$img = $details['favicon'];
-		$url = str_replace("NAME",get_option($nm),$uri);
 		if(get_option($nm))
 		{
-?>
-			<div id="myprofiles_<?php  echo $count_profile; ?>">
-				<a href="<?php echo $url; ?>" title="<?php echo $site ?>" target="_blank">
-					<img border="0" src="<?php echo $myprofiles_path . $img;?>" alt="<?php echo $site; ?>" />
-				</a>
-			</div> 
-<?php
+			$list = explode(";",get_option($nm));
+			foreach($list as $list_item)
+			{
+			$url = str_replace("NAME",$list_item,$uri);
+//			echo "<div id='myprofiles_" . $count_profile . "'>";
+//			echo "<a href='" . $url . "' title='" .  $site ."' target='_blank'>";
+//			echo "<img border='0' src='" . $myprofiles_path . $img . "' alt='" . $site . "/>";
+//			echo "</a></div> ";
 			$count_profile = $count_profile + 1;
+			}
 		}
 	}
 	$count_profile = 0;
