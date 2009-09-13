@@ -25,7 +25,16 @@ Description: this plugin provides a sleek and easy way to list all your profiles
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+?>
+<?php
+// Internationalization
+/*
+Help on persian transalation by Mostafa <mostafa.s1990@gmail.com>
+*/
+ load_plugin_textdomain('my-profiles','wp-content/plugins/my-profiles/i18n'); ?>
+<?php
 include ('myprofiles_global.php');
+include_once ('myprofiles_func.php');
 ?>
 <?php
  $myprofiles_path = WP_CONTENT_URL.'/plugins/'.plugin_basename(dirname(__FILE__)).'/';
@@ -46,7 +55,25 @@ To edit the options for this widget, please visit the <a href="options-general.p
 // display widget code goes here
 function widget_myprofiles()
 {
-include('myprofiles_sidebar.php');
+?>
+	<li id="myprofiles_sidebar">
+		 <div id="myprofiles_sidebar_head">
+			<h2><?php _e('My Profiles', 'my-profiles'); ?></h2>
+		 </div>
+	 <div class="clear"></div>
+	<div id="myprofiles_sidebar_content">
+	 
+<?php
+show_myprofiles();
+?>
+	</div>
+		<div class="clear"></div>
+		<div id="myprofiles_sidebar_footer">
+			<a href="http://anantshri.info/index.php?page=wpprofiles">Grab it here</a>
+		</div>
+		<div class="clear"></div>
+	</li>
+<?php
 //show_myprofiles();
 }
 // this is the initialization phase

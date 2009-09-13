@@ -32,6 +32,8 @@ FAQ section].
 
 So go ahead and grab it to start flaunting your profiles on your very own blog.
 
+<b>There had been some error in updating the repository and hence few of you might have got notice of an update 0.6 but I have to revert that back to 0.5 due to a severe bug causing wordpress admin to become non responsive. hence this version is 0.7 to avoid any confusion</b>
+
 
 == Installation ==
 
@@ -75,6 +77,9 @@ If in case of doubt feel free to contact me or post message at the forum.
 With version 0.6 you can eassily use this plugin even without using widget interface.
 
 in order to use this you just have to call `show_myprofiles()` anywhere inside the body or footer.
+But you have to keep in mind that this function will give you a list of all your profile's with images 
+but styling is not inclided in it. that is to be taken care by the theme editor only.
+(in case some one need's help i am always ready to help)
 
 = how to add multiple profiles =
 
@@ -90,12 +95,15 @@ Use the same box in myprofiles admin section just place your usernames by `;` se
 
 = Version 0.7 =
 
-1. Added support for multiple profile
+1. XHTML compliance
+2. option to directly add using function call reducing dependency on widget option. [refer FAQ section on how to use it].
+3. Added support for multiple profile
+4. added internationalization option <- need more help on making it truly international
+5. removed sidebar php file and instead created a generic function to display all profile
 
 = Version 0.6 =
 
-1. XHTML compliance
-2. option to directly add using function call reducing dependency on widget option. [refer FAQ section on how to use it].
+1. Tried adding some feature but instead ended up adding bugs hence not released
 
 = Version 0.5 =
 
