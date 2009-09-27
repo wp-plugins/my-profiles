@@ -70,7 +70,7 @@ and voila your new profile is in the admin interface just add your nick and you 
 <br /> 
 example for profile_url => `http://www.twitter.com/anantshri` will be converted to `http://www.twitter.com/NAME`
 <br /> <br /> 
-If in case of doubt feel free to contact me or post message at the forum.
+If in case of doubt feel free to contact me http://anantshri.info?page=contact or post message at the forum.
 
 = how to use this plugin without widget =
 

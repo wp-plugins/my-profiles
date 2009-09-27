@@ -1,15 +1,17 @@
 <?php
+load_plugin_textdomain ('my-profiles','wp-content/plugins/my-profiles/i18n');
 global $myprofiles;
 global $myprofiles_path; 
 $profileslist="";
 $count = sizeof($myprofiles);
 $inc;
 ?>
-	<h2 align="center">My profiles Admin panel</h2>
-<p>Please fill in the required details for the profiles for each service.<br />
-<font color="red">Currently Orkut, Jyte, Blogger and Indiblogger doesn't support nicknames so you have to enter their profile id's here.</font>
+<h2 align="center"><?php _e('My profiles Admin panel ', 'my-profiles'); ?></h2>
+<p><?php _e('Please fill in the required details for the profiles for each service.', 'my-profiles'); ?><br />
+<font color="red"><?php _e('Currently Orkut', 'my-profiles'); ?>, <?php _e('Jyte', 'my-profiles'); ?>, <?php _e('Blogger and Indiblogger doesn', 'my-profiles'); ?>'<?php _e('t support nicknames so you have to enter their profile id', 'my-profiles'); ?>'<?php _e('s here.', 'my-profiles'); ?></font>
+
 <br />
-<a href="http://anantshri.info/index.php?page=wpprofiles">for more details you can check here</a>
+<a href="http://anantshri.info/index.php?page=wpprofiles"><?php _e('for more details you can check here', 'my-profiles'); ?></a>
 </p>
 
 
@@ -17,9 +19,9 @@ $inc;
 <?php wp_nonce_field('update-options'); ?>
 <table class="form-table" style="align:center;" width="100%">
 <tr>
-<td>Name of service</td><td>User ids</td>
-<td>Name of service</td><td>User ids</td>
-<td>Name of service</td><td>User ids</td>
+<td><?php _e('Name of service', 'my-profiles'); ?></td><td><?php _e('User ids', 'my-profiles'); ?></td>
+<td><?php _e('Name of service', 'my-profiles'); ?></td><td><?php _e('User ids', 'my-profiles'); ?></td>
+<td><?php _e('Name of service', 'my-profiles'); ?></td><td><?php _e('User ids', 'my-profiles'); ?></td>
 </tr>
 <tr>
 <?php
@@ -61,8 +63,8 @@ if ($count % 3 != 0)
 }
 ?>
 <td>&nbsp;</td><td>&nbsp;</td>
-<td>Submit the form</td><td><input type="submit" value="<?php _e('Save Changes') ?>" /></td>
-<td>&nbsp;</td>
+<td><?php _e('Submit the form', 'my-profiles'); ?></td><td><input type="submit" value="<?php _e('Save Changes') ?>" /></td>
+ <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 </table>

@@ -16,23 +16,19 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: F:\Program
-#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
 msgid "To edit the options for this widget"
 msgstr "برای ویرایش تنظیمات ابزارک"
 
-#: F:\Program
-#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
 msgid "please visit the"
 msgstr "مراجعه کنید به"
 
-#: F:\Program
-#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
 msgid "my profiles Settings Page"
 msgstr "برگه تنظیمات پروفایل من"
 
-#: F:\Program
-#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:56
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:56
 #: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_sidebar.php:3
 msgid "My Profiles"
 msgstr "پروفایل های من"
