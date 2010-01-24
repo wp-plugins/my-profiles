@@ -25,14 +25,12 @@ without the troubles of remembering various nicknames all the time
 Some of  the salient features of this plugin
 
 * Simple hassle free widget + admin panel to add websites.
-* for those not having widget enabled theme or don't want to use widget we now have function call enabled.
+* for those not having widget enabled theme or don't want to use widget we now have function call enabled. [refer FAQ section]
 * If your favourite site is missing its as easy as 1 2 3 to add your website in the list [refer 
 FAQ section].
 * support showcasing of multiple profiles [refer FAQ]
 
 So go ahead and grab it to start flaunting your profiles on your very own blog.
-
-<b>There had been some error in updating the repository and hence few of you might have got notice of an update 0.6 but I have to revert that back to 0.5 due to a severe bug causing wordpress admin to become non responsive. hence this version is 0.7 to avoid any confusion</b>
 
 
 == Installation ==
@@ -76,7 +74,7 @@ If in case of doubt feel free to contact me http://anantshri.info?page=contact o
 
 With version 0.6 you can eassily use this plugin even without using widget interface.
 
-in order to use this you just have to call `show_myprofiles()` anywhere inside the body or footer.
+in order to use this you just have to call `<?php show_myprofiles(); ?>` anywhere inside the body or footer.
 But you have to keep in mind that this function will give you a list of all your profile's with images 
 but styling is not inclided in it. that is to be taken care by the theme editor only.
 (in case some one need's help i am always ready to help)
@@ -93,17 +91,13 @@ Use the same box in myprofiles admin section just place your usernames by `;` se
 
 == Changelog ==
 
-= Version 0.7 =
+= Version 0.6 =
 
 1. XHTML compliance
 2. option to directly add using function call reducing dependency on widget option. [refer FAQ section on how to use it].
 3. Added support for multiple profile
 4. added internationalization option <- need more help on making it truly international
 5. removed sidebar php file and instead created a generic function to display all profile
-
-= Version 0.6 =
-
-1. Tried adding some feature but instead ended up adding bugs hence not released
 
 = Version 0.5 =
 
