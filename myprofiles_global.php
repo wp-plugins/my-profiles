@@ -197,7 +197,7 @@ $myprofiles = Array(
 	),
 	"Scribd" => Array(
 		"name" => 'myprofiles_Scribd',
-		"favicon" => 'images/Scribd.png',
+		"favicon" => 'images/scribd.png',
 		"url" => 'http://www.scribd.com/anantshri',
 	),
 	"MyOpenId" => Array(
@@ -230,7 +230,7 @@ $myprofiles = Array(
 		"favicon" => 'images/programmableweb.png',
 		"url" => 'http://www.programmableweb.com/profile/NAME',
 	),
-		"Ohloh" => Array(
+	"Ohloh" => Array(
 		"name" => 'myprofiles_ohloh',
 		"favicon" => 'images/ohloh.png',
 		"url" => 'http://www.ohloh.net/accounts/NAME',
