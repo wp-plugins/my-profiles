@@ -229,6 +229,11 @@ $myprofiles = Array(
 		"name" => 'myprofiles_programmableweb',
 		"favicon" => 'images/programmableweb.png',
 		"url" => 'http://www.programmableweb.com/profile/NAME',
+	),
+		"Ohloh" => Array(
+		"name" => 'myprofiles_ohloh',
+		"favicon" => 'images/ohloh.png',
+		"url" => 'http://www.ohloh.net/accounts/NAME',
 	)
 );
 ?>
