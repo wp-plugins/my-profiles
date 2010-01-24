@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: my-profiles\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-09-06 18:26+0330\n"
+"PO-Revision-Date: \n"
+"Last-Translator: mostafa.s1990@gmail.com <mostafa.s1990@gmail.com>\n"
+"Language-Team:  <mostafa.s1990@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Persian\n"
+"X-Poedit-Country: IRAN, ISLAMIC REPUBLIC OF\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
+msgid "To edit the options for this widget"
+msgstr "برای ویرایش تنظیمات ابزارک"
+
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
+msgid "please visit the"
+msgstr "مراجعه کنید به"
+
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:42
+msgid "my profiles Settings Page"
+msgstr "برگه تنظیمات پروفایل من"
+
+#: F:\Program Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles.php:56
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_sidebar.php:3
+msgid "My Profiles"
+msgstr "پروفایل های من"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:9
+msgid "My profiles Admin panel "
+msgstr "پنل مدیریت پروفایل های من"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:10
+msgid "Please fill in the required details for the profiles for each service."
+msgstr "لطفا اطلاعات مورد نیاز برای پروفیل برای هر سرویس را پر کنید. "
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:11
+msgid "Currently Orkut"
+msgstr "در حال حاضر اورکات"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:11
+msgid "Jyte"
+msgstr "Jyte"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:11
+msgid "Blogger and Indiblogger doesn"
+msgstr "بلاگر و Indiblogger نشانی از لقب را"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:11
+msgid "t support nicknames so you have to enter their profile id"
+msgstr "پشتیبانی نمی کند بنابراین شما باید مشخصات را وارد کنید"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:11
+msgid "s here."
+msgstr "شناسه خود را در اینجا. "
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:13
+msgid "for more details you can check here"
+msgstr "برای اطلاعات بیشتر می توانید اینجا را کنید"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:21
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:22
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:23
+msgid "Name of service"
+msgstr "نام و سرویس"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:21
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:22
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:23
+msgid "User ids"
+msgstr "نام کاربری"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:65
+msgid "Submit the form"
+msgstr "ثبت فرم"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_admin.php:65
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
+
+#: F:\Program
+#: Files\AppServ\www\wordpress\wp-content\plugins\my-profiles/myprofiles_sidebar.php:35
+msgid "Grab it here"
+msgstr "سایت نویسنده"
+

@@ -4,8 +4,8 @@ Contributors: anantshri
 Donate link: http://anantshri.info/index.php?page=wpprofiles
 Tags: myprofiles,social profile,networking, social networking, widget
 Requires at least: 2.6
-Tested up to: 2.8.4
-Stable tag: 0.6
+Tested up to: 2.9.1
+Stable tag: 0.5
 
 
 Plugin to provides a sleek and easy way to list all your public profiles and to let others connect with you
@@ -25,9 +25,10 @@ without the troubles of remembering various nicknames all the time
 Some of  the salient features of this plugin
 
 * Simple hassle free widget + admin panel to add websites.
-* for those not having widget enabled theme or don't want to use widget we now have function call enabled.
+* for those not having widget enabled theme or don't want to use widget we now have function call enabled. [refer FAQ section]
 * If your favourite site is missing its as easy as 1 2 3 to add your website in the list [refer 
 FAQ section].
+* support showcasing of multiple profiles [refer FAQ]
 
 So go ahead and grab it to start flaunting your profiles on your very own blog.
 
@@ -67,14 +68,20 @@ and voila your new profile is in the admin interface just add your nick and you 
 <br /> 
 example for profile_url => `http://www.twitter.com/anantshri` will be converted to `http://www.twitter.com/NAME`
 <br /> <br /> 
-If in case of doubt feel free to contact me or post message at the forum.
+If in case of doubt feel free to contact me http://anantshri.info?page=contact or post message at the forum.
 
 = how to use this plugin without widget =
 
 With version 0.6 you can eassily use this plugin even without using widget interface.
 
-in order to use this you just have to call `show_myprofiles()` anywhere inside the body or footer.
+in order to use this you just have to call `<?php show_myprofiles(); ?>` anywhere inside the body or footer.
+But you have to keep in mind that this function will give you a list of all your profile's with images 
+but styling is not inclided in it. that is to be taken care by the theme editor only.
+(in case some one need's help i am always ready to help)
 
+= how to add multiple profiles =
+
+Use the same box in myprofiles admin section just place your usernames by `;` seperator.
 
 == Screenshots ==
 1. Screen shot of working my profiles plugin on my site
@@ -88,6 +95,10 @@ in order to use this you just have to call `show_myprofiles()` anywhere inside t
 
 1. XHTML compliance
 2. option to directly add using function call reducing dependency on widget option. [refer FAQ section on how to use it].
+3. Added support for multiple profile
+4. added internationalization option <- need more help on making it truly international
+5. removed sidebar php file and instead created a generic function to display all profile
 
+= Version 0.5 =
 
 Initial Release

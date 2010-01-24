@@ -1,36 +1,4 @@
 <?php
-function show_myprofiles()
-{
-				global $myprofiles_path; 
-				global $myprofiles;
-//				echo $before_widget;  
-	//			echo $before_title;
-		//		echo $after_title;
-	$count_profile = 1;
-	foreach($myprofiles as $site=>$details)
-	{
-		$nm = $details['name'];
-		$uri = $details['url'];
-		$img = $details['favicon'];
-		$url = str_replace("NAME",get_option($nm),$uri);
-		if(get_option($nm))
-		{
-?>
-			<div id="myprofiles_<?php  echo $count_profile; ?>">
-				<a href="<?php echo $url; ?>" title="<?php echo $site ?>" target="_blank">
-					<img border="0" src="<?php echo $myprofiles_path . $img;?>" alt="<?php echo $site; ?>" />
-				</a>
-			</div> 
-<?php
-			$count_profile = $count_profile + 1;
-		}
-	}
-	$count_profile = 0;
-}
-?>		 
-
-
-<?php
 $myprofiles = Array(
 	"43things" => Array(
 	    "name" => 'myprofiles_43things',
@@ -191,6 +159,76 @@ $myprofiles = Array(
 	    "name" => 'myprofiles_youtube',
 		"favicon" => 'images/youtube.png',
 		"url" => 'http://youtube.com/user/NAME',
+	),
+	"DeviantArt" => Array(
+		"name" => 'myprofiles_deviantart',
+		"favicon" => 'images/deviantart.png',
+		"url" => 'http://NAME.deviantart.com/',
+	),
+	"Gtalkbots" => Array(
+		"name" => 'myprofiles_gtalkbots',
+		"favicon" => 'images/gtalkbots.png',
+		"url" => 'http://gtalkbots.com/NAME',
+	),
+	"Secondbrain" => Array(
+		"name" => 'myprofiles_secondbrain',
+		"favicon" => 'images/secondbrain.png',
+		"url" => 'http://NAME.secondbrain.com/',
+	),
+	"SocialMedian" => Array(
+		"name" => 'myprofiles_socialmedian',
+		"favicon" => 'images/socialmedian.png',
+		"url" => 'http://www.socialmedian.com/NAME',
+	),
+	"Mixx" => Array(
+		"name" => 'myprofiles_mixx',
+		"favicon" => 'images/mixx.png',
+		"url" => 'http://www.mixx.com/users/NAME',
+	),
+	"identi.ca" => Array(
+		"name" => 'myprofiles_identica',
+		"favicon" => 'images/identica.png',
+		"url" => 'http://identi.ca/NAME',
+	),
+	"Ubuntu Forum" => Array(
+		"name" => 'myprofiles_ubuntu',
+		"favicon" => 'images/ubuntu.png',
+		"url" => 'http://ubuntuforums.org/member.php?u=NAME',
+	),
+	"Scribd" => Array(
+		"name" => 'myprofiles_Scribd',
+		"favicon" => 'images/Scribd.png',
+		"url" => 'http://www.scribd.com/anantshri',
+	),
+	"MyOpenId" => Array(
+		"name" => 'myprofiles_myopenid',
+		"favicon" => 'images/myopenid.png',
+		"url" => 'http://NAME.myopenid.com/',
+	),
+	"Hacker News" => Array(
+		"name" => 'myprofiles_ycombinator',
+		"favicon" => 'images/ycombinator.png',
+		"url" => 'http://news.ycombinator.com/user?id=NAME',
+	),
+	"NetLog" => Array(
+		"name" => 'myprofiles_netlog',
+		"favicon" => 'images/netlog.png',
+		"url" => 'http://en.netlog.com/NAME',
+	),
+	"Freebase" => Array(
+		"name" => 'myprofiles_freebase',
+		"favicon" => 'images/freebase.png',
+		"url" => 'http://www.freebase.com/view/user/NAME',
+	),
+	"mento" => Array(
+		"name" => 'myprofiles_mento',
+		"favicon" => 'images/mento.png',
+		"url" => 'http://www.mento.info/NAME',
+	),
+	"programmableweb" => Array(
+		"name" => 'myprofiles_programmableweb',
+		"favicon" => 'images/programmableweb.png',
+		"url" => 'http://www.programmableweb.com/profile/NAME',
 	)
 );
 ?>

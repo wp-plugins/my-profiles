@@ -25,7 +25,19 @@ Description: this plugin provides a sleek and easy way to list all your profiles
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+?>
+<?php
+// Internationalization
+/*
+Help on persian transalation by Mostafa <mostafa.s1990@gmail.com>
+*/
+ load_plugin_textdomain('my-profiles','wp-content/plugins/my-profiles/i18n'); ?>
+<?php
 include ('myprofiles_global.php');
+// Standard My profiles function
+include_once ('myprofiles_func.php');
+//Side bar function
+include_once ('myprofiles_sidebar.php');
 ?>
 <?php
  $myprofiles_path = WP_CONTENT_URL.'/plugins/'.plugin_basename(dirname(__FILE__)).'/';
@@ -39,20 +51,20 @@ function widget_myprofiles_control()
 {
 ?>
 <div style="text-align:left">
+<?php _e('To edit the options for this widget', 'my-profiles'); ?>, 
+<?php _e('please visit the', 'my-profiles'); ?> 
+<a href="options-general.php?page=myprofiles">
+<?php _e('my profiles Settings Page', 'my-profiles'); ?></a>.
 To edit the options for this widget, please visit the <a href="options-general.php?page=myprofiles">my profiles Settings Page</a>.
 </div>
 <?php
 }
+
 // display widget code goes here
-function widget_myprofiles()
-{
-include('myprofiles_sidebar.php');
 //show_myprofiles();
-}
 // this is the initialization phase
 function myprofile_init()
 {
-//echo "Hello"
 global $myprofiles;
 register_sidebar_widget(__('My Profiles'), 'widget_myprofiles');
 register_widget_control('My Profiles', 'widget_myprofiles_control');
@@ -62,7 +74,6 @@ wp_enqueue_script("jquery");
 function myprofile_admin()
 {
 	add_options_page('My profiles', 'My profiles', 8, 'myprofiles', 'myprofiles_options_admin');
-//echo "admin section working now";
 }
 // HOOKS DONE HERE
 add_action('plugins_loaded', 'myprofile_init');
