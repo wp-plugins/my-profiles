@@ -34,7 +34,10 @@ Help on persian transalation by Mostafa <mostafa.s1990@gmail.com>
  load_plugin_textdomain('my-profiles','wp-content/plugins/my-profiles/i18n'); ?>
 <?php
 include ('myprofiles_global.php');
+// Standard My profiles function
 include_once ('myprofiles_func.php');
+//Side bar function
+include_once ('myprofiles_sidebar.php');
 ?>
 <?php
  $myprofiles_path = WP_CONTENT_URL.'/plugins/'.plugin_basename(dirname(__FILE__)).'/';
@@ -56,30 +59,9 @@ To edit the options for this widget, please visit the <a href="options-general.p
 </div>
 <?php
 }
+
 // display widget code goes here
-function widget_myprofiles()
-{
-?>
-	<li id="myprofiles_sidebar">
-		 <div id="myprofiles_sidebar_head">
-			<h2><?php _e('My Profiles', 'my-profiles'); ?></h2>
-		 </div>
-	 <div class="clear"></div>
-	<div id="myprofiles_sidebar_content">
-	 
-<?php
-show_myprofiles();
-?>
-	</div>
-		<div class="clear"></div>
-		<div id="myprofiles_sidebar_footer">
-		<a href="http://wordpress.org/extend/plugins/my-profiles/"><?php _e('Grab it here', 'my-profiles'); ?></a>
-		</div>
-		<div class="clear"></div>
-	</li>
-<?php
 //show_myprofiles();
-}
 // this is the initialization phase
 function myprofile_init()
 {
