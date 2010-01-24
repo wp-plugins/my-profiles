@@ -63,7 +63,7 @@ if ($count % 3 != 0)
 }
 ?>
 <td>&nbsp;</td><td>&nbsp;</td>
-<td><?php _e('Submit the form', 'my-profiles'); ?></td><td><input type="submit" value="<?php _e('Save Changes') ?>" /></td>
+<td><?php //_e('Submit the form', 'my-profiles'); ?></td><td><input type="submit" value="<?php _e('Save Changes') ?>" /></td>
  <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
