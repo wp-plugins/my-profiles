@@ -1,6 +1,9 @@
 <?php
-function show_myprofiles()
+function show_myprofiles($atts = 'v')
 {
+	extract(shortcode_atts(array(
+		'align' => 'v'
+		), $atts));
 	global $myprofiles_path; 
 	global $myprofiles;
 	$count_profile = 1;
@@ -15,7 +18,12 @@ function show_myprofiles()
 			foreach($list as $list_item)
 			{
 			$url = str_replace("NAME",$list_item,$uri);
-			echo "<div id='myprofiles_" . $count_profile . "'>";
+			echo "<div id='myprofiles_" . $count_profile . "'";
+			if ($align=='h')
+			{
+			echo " style='float:left;width:45;height:45;display:block'";
+			}
+			echo ">";
 			echo "<a href='" . $url . "' title='" .  $site ."' target='_blank'>";
 			echo "<img border='0' src='" . $myprofiles_path . $img . "' alt='" . $site . "'/>";
 			echo "</a></div> ";

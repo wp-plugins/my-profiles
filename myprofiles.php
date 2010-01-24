@@ -46,6 +46,10 @@ function myprofiles_options_admin()
 {
 include('myprofiles_admin.php');
 }
+/*
+ShortCode added to enable listing of profile data within post or page if needed
+*/
+add_shortcode('my-profiles', 'show_myprofiles');
 // widget control options
 function widget_myprofiles_control()
 {
