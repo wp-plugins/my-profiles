@@ -5,16 +5,17 @@
 <body>
 <?php
 // get the prarmeters from query string and then proceed forward.
-
+$height = $_GET['height'];
+$width= $_GET['width'];
 //echo "<!--Path = " . WP_CONTENT_URL . "$done-->";
 $wpload_path = '../../../wp-load.php';
 include_once($wpload_path);
 include_once('myprofiles.php');
-function profiles_view($width = '100', $height = '400')
+function profiles_view($w = '250', $h = '400')
 {
 	echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $myprofiles_path . 'myprofiles.css" />'."\n";
 ?>
-<div id="myprofiles" style='width:<?php echo $width; ?>px;height:<?php echo $height; ?>px'>
+<div id="myprofiles" style='width:<?php echo $w; ?>px;height:<?php echo $h; ?>px'>
 	<div id="myprofiles_head">		
 		<h2><?php _e('My Profiles', 'my-profiles'); ?></h2>
 	</div>
@@ -29,7 +30,7 @@ function profiles_view($width = '100', $height = '400')
 </div>
 <?php
 }
-profiles_view('100','200');
+profiles_view($width,$height);
 ?>
 </body>
 </html>
