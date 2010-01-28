@@ -83,8 +83,9 @@ function myprofile_admin()
 add_action('plugins_loaded', 'myprofile_init');
 add_action('admin_menu', 'myprofile_admin');
 add_action('wp_head', 'myprofiles_head');
-function myprofiles_head() {
+function myprofiles_head() 
+{
 	global $myprofiles_path;
-		echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $myprofiles_path . 'myprofiles.css" />'."\n";
-	}
+	echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $myprofiles_path . 'myprofiles.css" />'."\n";
+}
 ?>
