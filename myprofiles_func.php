@@ -26,9 +26,10 @@ function show_myprofiles($atts = 'v')
 			echo ">";
 			echo "<a href='" . $url . "' title='" .  $site ."' target='_blank'>";
 			echo "<img border='0' src='" . $myprofiles_path . $img . "' alt='" . $site . "'/>";
-			echo "</a></div> ";
+			echo "</a></div>\n\t\t";
 			$count_profile = $count_profile + 1;
 			}
+			echo "\n";
 		}
 	}
 	$count_profile = 0;

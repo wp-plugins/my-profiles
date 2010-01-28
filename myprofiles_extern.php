@@ -12,7 +12,7 @@ function profiles_view($width = '100', $height = '400')
 {
 	echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $myprofiles_path . 'myprofiles.css" />'."\n";
 ?>
-<div id="myprofiles" style='width=<?php echo $width; ?>px;height=<?php echo $height; ?>px'>
+<div id="myprofiles" style='width:<?php echo $width; ?>px;height:<?php echo $height; ?>px'>
 	<div id="myprofiles_head">		
 		<h2><?php _e('My Profiles', 'my-profiles'); ?></h2>
 	</div>
