@@ -4,6 +4,8 @@
 </head>
 <body>
 <?php
+// get the prarmeters from query string and then proceed forward.
+
 //echo "<!--Path = " . WP_CONTENT_URL . "$done-->";
 $wpload_path = '../../../wp-load.php';
 include_once($wpload_path);
