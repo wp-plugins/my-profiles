@@ -38,7 +38,7 @@ function myprofiles_js()
 {
 ?>
 function writeHTMLasJS(){
-document.write("<link rel=\"stylesheet\" type=\"text\/css\" media=\"screen\" href=\"myprofiles.css\" \/>");
+document.write("<link rel=\"stylesheet\" type=\"text\/css\" media=\"screen\" href=\"<?php echo $myprofiles_path; ?>myprofiles.css\" \/>");
 document.write("<div id=\"myprofiles\" style='width:" + width + "px;height:" + height + "px'>");
 document.write("	<div id=\"myprofiles_head\">		");
 document.write("		<h2>My Profiles<\/h2>");
