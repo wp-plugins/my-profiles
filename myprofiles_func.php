@@ -37,8 +37,9 @@ function show_myprofiles($atts = 'v')
 function myprofiles_js()
 {
 ?>
+function writeHTMLasJS(){
 document.write("<link rel=\"stylesheet\" type=\"text\/css\" media=\"screen\" href=\"myprofiles.css\" \/>");
-document.write("<div id=\"myprofiles\" style='width:180px;height:250px'>");
+document.write("<div id=\"myprofiles\" style='width:" + width + "px;height:" + height + "px'>");
 document.write("	<div id=\"myprofiles_head\">		");
 document.write("		<h2>My Profiles<\/h2>");
 document.write("	<\/div>");
@@ -59,8 +60,9 @@ document.write("	");
 			foreach($list as $list_item)
 			{
 			$url = str_replace("NAME",$list_item,$uri);
+/*document.write("<div id='myprofiles_<?php echo $count_profile; ?>'<?php if ($align=='h') then echo"style='float:left;width:45;height:45;display:block'"; ?>> <a href='<?php json_encode($url); ?>' title='<?php echo $site; ?>' target='_blank'><img border='0' src='<?php json_encode($myprofiles_path . $img); ?>' alt='<?php echo $site; ?>'\/><\/a><\/div> ");*/
 ?>
-document.write("<div id='myprofiles_<?php echo $count_profile; ?>'<?php if ($align=='h') then echo"style='float:left;width:45;height:45;display:block'"; ?>> <a href='<?php json_encode($url); ?>' title='<?php echo $site; ?>' target='_blank'><img border='0' src='<?php json_encode($myprofiles_path . $img); ?>' alt='<?php echo $site; ?>'\/><\/a><\/div> ");
+document.write("<div id='myprofiles_<?php echo $count_profile; ?>' > <a href='<?php echo $url; ?>' title='<?php echo $title; ?>' target='_blank'><img border='0' src='<?php echo $myprofiles_path . $img ?>' alt='<?php echo $site; ?>'\/><\/a><\/div> ");
 <?php
 			$count_profile = $count_profile + 1;
 			}
@@ -74,6 +76,7 @@ document.write("	<div id=\"myprofiles_sidebar_footer\">");
 document.write("		<a href=\"http:\/\/wordpress.org\/extend\/plugins\/my-profiles\/\">Grab it here<\/a>");
 document.write("	<\/div>");
 document.write("<\/div>");
+}
 <?php
 }
 ?>

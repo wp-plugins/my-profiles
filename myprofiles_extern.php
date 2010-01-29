@@ -5,8 +5,14 @@
 <body>
 <?php
 // get the prarmeters from query string and then proceed forward.
-$height = $_GET['height'];
-$width= $_GET['width'];
+if (isset($_GET['height']))
+{
+	$height = $_GET['height'];
+}
+if (isset($_GET['width']))
+{
+	$width= $_GET['width'];
+}
 //echo "<!--Path = " . WP_CONTENT_URL . "$done-->";
 $wpload_path = '../../../wp-load.php';
 include_once($wpload_path);
@@ -30,7 +36,14 @@ function profiles_view($w = '250', $h = '400')
 </div>
 <?php
 }
-profiles_view($width,$height);
+if (isset($height) && isset($width))
+{
+	profiles_view($width,$height);
+}
+else
+{
+	profiles_view();
+}
 ?>
 </body>
 </html>
