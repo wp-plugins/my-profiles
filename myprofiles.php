@@ -31,6 +31,11 @@ Description: this plugin provides a sleek and easy way to list all your profiles
 /*
 Help on persian transalation by Mostafa <mostafa.s1990@gmail.com>
 */
+if (isset($_GET['widget']) && $_GET['widget'] == 'rss')
+{
+	$wpload_path = '../../../wp-load.php';
+	include_once($wpload_path);
+}
  load_plugin_textdomain('my-profiles','wp-content/plugins/my-profiles/i18n'); ?>
 <?php
 include ('myprofiles_global.php');
@@ -87,5 +92,9 @@ function myprofiles_head()
 {
 	global $myprofiles_path;
 	echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $myprofiles_path . 'myprofiles.css" />'."\n";
+}
+if (isset($_GET['widget']) && $_GET['widget'] == 'rss')
+{
+	myprofiles_js();
 }
 ?>
