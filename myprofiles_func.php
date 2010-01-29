@@ -36,6 +36,7 @@ function show_myprofiles($atts = 'v')
 }
 function myprofiles_js()
 {
+global $myprofiles_path; 
 ?>
 function writeHTMLasJS(){
 document.write("<link rel=\"stylesheet\" type=\"text\/css\" media=\"screen\" href=\"<?php echo $myprofiles_path; ?>myprofiles.css\" \/>");
@@ -43,7 +44,7 @@ document.write("<div id=\"myprofiles\" style='width:" + width + "px;height:" + h
 document.write("	<div id=\"myprofiles_head\">		");
 document.write("		<h2>My Profiles<\/h2>");
 document.write("	<\/div>");
-document.write("	<div id=\"myprofiles_sidebar_content\">");
+document.write("	<div id=\"myprofiles_content\">");
 document.write("	");
 <?php
 	global $myprofiles_path; 
@@ -72,8 +73,8 @@ document.write("<div id='myprofiles_<?php echo $count_profile; ?>' > <a href='<?
 	$count_profile = 0;
 ?>
 document.write("");
-document.write("	<div id=\"myprofiles_sidebar_footer\">");
-document.write("		<a href=\"http:\/\/wordpress.org\/extend\/plugins\/my-profiles\/\">Grab it here<\/a>");
+document.write("	<div id=\"myprofiles_footer\">");
+document.write("		<a href=\"http://wordpress.org/extend/plugins/my-profiles/\">Grab it here<\/a>");
 document.write("	<\/div>");
 document.write("<\/div>");
 }
