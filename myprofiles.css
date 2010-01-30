@@ -4,13 +4,23 @@
 	height: 25px;
 	width: 25px;
 }
-#myprofiles_footer{
+#myprofiles_sidebar_footer{
+ float: right;
+}
+#myprofiles_widget_footer{
+ width: 75px;
  float: right;
 }
 #myprofile{
  padding:0px;
 }
-#myprofiles_content div {
+#myprofiles_sidebar_content div {
+	display: block;
+	float: left;
+	height: 25px;
+	width: 25px;	
+}
+#myprofiles_widget_content div {
 	display: block;
 	float: left;
 	height: 25px;

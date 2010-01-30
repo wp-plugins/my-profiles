@@ -95,6 +95,7 @@ function myprofiles_head()
 }
 if (isset($_GET['widget']) && $_GET['widget'] == 'rss')
 {
+	header('Content-type: application/x-javascript');
 	myprofiles_js();
 }
 ?>
