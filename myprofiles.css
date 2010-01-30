@@ -1,26 +1,26 @@
-#myprofiles {
+div.myprofiles {
 	display: block;
 	float: left;
 	height: 25px;
 	width: 25px;
 }
-#myprofiles_sidebar_footer{
+div.myprofiles_sidebar_footer{
  float: right;
 }
-#myprofiles_widget_footer{
+div.myprofiles_widget_footer{
  width: 75px;
  float: right;
 }
-#myprofile{
+div.myprofile{
  padding:0px;
 }
-#myprofiles_sidebar_content div {
+div#myprofiles_sidebar_content div {
 	display: block;
 	float: left;
 	height: 25px;
 	width: 25px;	
 }
-#myprofiles_widget_content div {
+div#myprofiles_widget_content div {
 	display: block;
 	float: left;
 	height: 25px;

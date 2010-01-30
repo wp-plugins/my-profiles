@@ -122,7 +122,7 @@ $myprofiles = Array(
 	),
 	"SlideShare" => Array(
 	    "name" => 'myprofiles_slideshare',
-		"favicon" => 'images/slideshare.gif',
+		"favicon" => 'images/slideshare.png',
 		"url" => 'http://www.slideshare.net/NAME/',
 	),
     "Stumbleupon" => Array(

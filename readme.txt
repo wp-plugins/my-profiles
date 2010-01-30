@@ -20,7 +20,10 @@ Sometimes it feels so weird to tell our friends which nickname has been used for
 
 This plugin helps you in showcasing all or rather most of your profiles at one place <br />
 and in turn provides an opportunity for bloggers to expand there networks on multiple sites<br />
-without the troubles of remembering various nicknames all the time
+without the troubles of remembering various nicknames all the time.
+
+This plugin from version 0.7 not only has option to add widget in wordpress self hosted blog but also you 
+can add widget to all your other sides.
 
 Some of  the salient features of this plugin
 
@@ -29,6 +32,7 @@ Some of  the salient features of this plugin
 * If your favourite site is missing its as easy as 1 2 3 to add your website in the list [refer 
 FAQ section].
 * support showcasing of multiple profiles [refer FAQ]
+* support to add this widget on various sites [refer FAQ]
 
 So go ahead and grab it to start flaunting your profiles on your very own blog.
 
@@ -83,6 +87,11 @@ but styling is not inclided in it. that is to be taken care by the theme editor 
 
 Use the same box in myprofiles admin section just place your usernames by `;` seperator.
 
+= how to place this widget outside wordpress blog =
+
+Just select the option to enable the external widget option in admin page of the plugin and you will get the 
+sample script that you should use on other sites.
+
 == Screenshots ==
 1. Screen shot of working my profiles plugin on my site
 
@@ -90,6 +99,12 @@ Use the same box in myprofiles admin section just place your usernames by `;` se
 
 
 == Changelog ==
+
+= Version 0.7 =
+
+1. added support for wordpress tag.
+2. added support for placing external widget.
+3. added few more sites in the list. 
 
 = Version 0.6 =
 
