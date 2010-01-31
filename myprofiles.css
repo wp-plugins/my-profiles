@@ -1,28 +1,30 @@
-div.myprofiles {
+#myprofiles {
 	display: block;
 	float: left;
 	height: 25px;
 	width: 25px;
 }
-div.myprofiles_sidebar_footer{
+#myprofiles_sidebar_footer{
  float: right;
 }
-div.myprofiles_widget_footer{
+#myprofiles_widget_footer{
  width: 75px;
  float: right;
 }
-div.myprofile{
+#myprofile{
  padding:0px;
 }
-div#myprofiles_sidebar_content div {
+#myprofiles_sidebar_content div {
 	display: block;
 	float: left;
 	height: 25px;
 	width: 25px;	
 }
-div#myprofiles_widget_content div {
+#myprofiles_widget_content a {
 	display: block;
 	float: left;
 	height: 25px;
-	width: 25px;	
+	width: 25px;
+	background-repeat:no-repeat;
+	text-indent:-9999px;
 }

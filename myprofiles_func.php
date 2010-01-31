@@ -1,5 +1,5 @@
 <?php
-function show_myprofiles($atts = 'v')
+function show_myprofiles($atts = 'v',$type='html')
 {
 	extract(shortcode_atts(array(
 		'align' => 'v'
@@ -17,17 +17,26 @@ function show_myprofiles($atts = 'v')
 			$list = explode(";",get_option($nm));
 			foreach($list as $list_item)
 			{
-			$url = str_replace("NAME",$list_item,$uri);
-			echo "<div id='myprofiles_" . $count_profile . "'";
-			if ($align=='h')
-			{
-			echo " style='float:left;width:45;height:45;display:block'";
-			}
-			echo ">";
-			echo "<a href='" . $url . "' title='" .  $site ."' target='_blank'>";
-			echo "<img border='0' src='" . $myprofiles_path . $img . "' alt='" . $site . "'/>";
-			echo "</a></div>\n\t\t";
-			$count_profile = $count_profile + 1;
+				if ($type == 'js')
+				{
+?>
+				document.write("<a id='myprofiles_<?php echo $count_profile; ?>' style='background-image: url(<?php echo $myprofiles_path . $img ?>);' href='<?php echo $url; ?>' title='<?php echo $site; ?>' target='_blank'><?php echo $site; ?><\/a>");
+<?php
+				}
+				else
+				{
+					$url = str_replace("NAME",$list_item,$uri);
+					echo "<div id='myprofiles_" . $count_profile . "'";
+					if ($align=='h')
+					{
+						echo " style='float:left;width:45;height:45;display:block'";
+					}
+					echo ">";
+					echo "<a href='" . $url . "' title='" .  $site ."' target='_blank'>";
+					echo "<img border='0' src='" . $myprofiles_path . $img . "' alt='" . $site . "'/>";
+					echo "</a></div>\n\t\t";
+					$count_profile = $count_profile + 1;
+				}				
 			}
 			echo "\n";
 		}
@@ -48,7 +57,7 @@ document.write("	<\/div>");
 document.write("	<div id=\"myprofiles_widget_content\">");
 document.write("	");
 <?php
-	global $myprofiles_path; 
+/*	global $myprofiles_path; 
 	global $myprofiles;
 	$count_profile = 1;
 	foreach($myprofiles as $site=>$details)
@@ -66,20 +75,25 @@ document.write("	");
 // This one is working code 
 /*document.write("<div id='myprofiles_<?php echo $count_profile; ?>' > <a href='<?php echo $url; ?>' title='<?php echo $title; ?>' target='_blank'><img border='0' src='<?php echo $myprofiles_path . $img ?>' alt='<?php echo $site; ?>'\/><\/a><\/div> ");*/
 // This works in case img tag has some css already applied to it..
+/*document.write("<div id='myprofiles_<?php echo $count_profile; ?>' style='position:relative;background-image: url(<?php echo $myprofiles_path . $img ?>);background-repeat:no-repeat;'> <a href='<?php echo $url; ?>' title='<?php echo $site; ?>' target='_blank'><\/a><\/div> ");*/
+// checking to see if we can eliminate the need of DIV tag at all.
+/*document.write("<a id='myprofiles_<?php echo $count_profile; ?>' style='background-image: url(<?php echo $myprofiles_path . $img ?>);' href='<?php echo $url; ?>' title='<?php echo $site; ?>' target='_blank'><?php echo $site; ?><\/a>");
+*/
 ?>
-document.write("<div id='myprofiles_<?php echo $count_profile; ?>' style='position:relative;background-image: url(<?php echo $myprofiles_path . $img ?>);background-repeat:no-repeat;'> <a href='<?php echo $url; ?>' title='<?php echo $title; ?>' target='_blank'>&nbsp;&nbsp;&nbsp;&nbsp;<\/a><\/div> ");
 <?php
-			$count_profile = $count_profile + 1;
+/*			$count_profile = $count_profile + 1;
 			}
 			echo "\n";
 		}
 	}
 	$count_profile = 0;
+*/
+show_myprofiles('h','js')
 ?>
 document.write("</div>");
 document.write("<br /><span>&nbsp;</span><br />");
 document.write("	<div id=\"myprofiles_widget_footer\">");
-document.write("		<a href=\"http://wordpress.org/extend/plugins/my-profiles/\">Grab it here<\/a>");
+document.write("		<a href=\"http://wordpress.org/extend/plugins/my-profiles/\" target=\"_blank\">Grab it here<\/a>");
 document.write("	<\/div>");
 document.write("<\/div>");
 }
