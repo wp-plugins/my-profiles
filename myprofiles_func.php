@@ -17,6 +17,7 @@ function show_myprofiles($atts = 'v',$type='html')
 			$list = explode(";",get_option($nm));
 			foreach($list as $list_item)
 			{
+				$url = str_replace("NAME",$list_item,$uri);
 				if ($type == 'js')
 				{
 ?>
@@ -25,7 +26,6 @@ function show_myprofiles($atts = 'v',$type='html')
 				}
 				else
 				{
-					$url = str_replace("NAME",$list_item,$uri);
 					echo "<div id='myprofiles_" . $count_profile . "'";
 					if ($align=='h')
 					{
