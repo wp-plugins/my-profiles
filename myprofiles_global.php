@@ -234,6 +234,11 @@ $myprofiles = Array(
 		"name" => 'myprofiles_ohloh',
 		"favicon" => 'images/ohloh.png',
 		"url" => 'http://www.ohloh.net/accounts/NAME',
+	),
+	"Windows Live" => Array(
+		"name" => 'myprofiles_live',
+		"favicon" => 'images/live_profile.png',
+		"url" => 'http://NAME.profile.live.com/'
 	)
 );
 ?>
