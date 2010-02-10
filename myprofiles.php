@@ -121,4 +121,22 @@ if (isset($wp_query->query_vars['myprofiles']) && $wp_query->query_vars['myprofi
 //	print $wp_query->query_vars['myvar'];
 		myprofiles_js();
 }*/
+// permalink generation code for widget.
+//  flush existing wp rewrites
+add_action('init', 'myprofiles_flush_rewrite_rules');
+function myprofiles_flush_rewrite_rules() 
+{
+   global $wp_rewrite;
+   $wp_rewrite->flush_rules();
+}
+add_action('generate_rewrite_rules', 'myprofiles_add_rewrite_rules');
+
+function myprofiles_add_rewrite_rules( $wp_rewrite ) 
+{
+  $new_rules = array( 
+     'myprofile/(.+)' => 'index.php?myprofile=' .
+       $wp_rewrite->preg_index(1) );
+
+  $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+}
 ?>

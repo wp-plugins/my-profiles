@@ -13,7 +13,7 @@ function test1()
 }
 function scr(width,height)
 {
-	var txt = "<script src='<?php echo $myprofiles_path; ?>myprofiles.php?widget=rss'>";
+	var txt = "<script src='<?php echo bloginfo('url'); ?>/myprofile=js'>";
 //	txt = txt + "<script>var width = " + width + "var height" + height;document.getElementById("text_jscript_option").value = txt;
 	
 }
@@ -34,7 +34,7 @@ function scr(width,height)
 <b>Edit option for widget to display</b><label>Width:</label><input type="text" id="width" maxlength="4" onKeyUp="test1()" />
 <br />
 <textarea rows="6" cols="130" disabled="disabled" readonly="readonly" id="text_jscript_option">
-<script src="<?php echo $myprofiles_path; ?>myprofiles.php?widget=rss"></script>
+<script src="<?php echo bloginfo('url'); ?>/myprofile=js"></script>
 <script>
 	var height = 100;
 	var width = 200;
