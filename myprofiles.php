@@ -31,7 +31,8 @@ Description: this plugin provides a sleek and easy way to list all your profiles
 /*
 Help on persian transalation by Mostafa <mostafa.s1990@gmail.com>
 */
-if (isset($_GET['widget']) && $_GET['widget'] == 'rss')
+// try to get the widget extraction directly.
+if (isset($_GET['widget']) && $_GET['widget'] == 'js')
 {
 	$wpload_path = '../../../wp-load.php';
 	include_once($wpload_path);
@@ -93,9 +94,31 @@ function myprofiles_head()
 	global $myprofiles_path;
 	echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $myprofiles_path . 'myprofiles.css" />'."\n";
 }
-if (isset($_GET['widget']) && $_GET['widget'] == 'rss')
+// try to get the widget extraction directly.
+if (isset($_GET['widget']) && $_GET['widget'] == 'js')
 {
 	header('Content-type: application/x-javascript');
 	myprofiles_js();
 }
+// this is second try to have wordpress directly creating the url.
+add_filter('query_vars','my_profiles_parameter');
+function my_profiles_parameter($vars) {
+    $vars[] = 'myprofile';
+    return $vars;
+}
+add_action('template_redirect', 'myprofies_trigger_check');
+function myprofies_trigger_check() {
+	if(get_query_var('myprofile') == 'js') 
+	{
+		header('Content-type: application/x-javascript');
+		myprofiles_js();
+		exit;
+	}
+}
+/*global $wp_query;
+if (isset($wp_query->query_vars['myprofiles']) && $wp_query->query_vars['myprofiles'] == 'widget')
+{
+//	print $wp_query->query_vars['myvar'];
+		myprofiles_js();
+}*/
 ?>
