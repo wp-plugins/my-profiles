@@ -1,1 +1,0 @@
-[29-Jun-2009 12:32:43] PHP Fatal error:  Call to undefined function plugin_basename() in /home/anant/public_html/blog/wp-content/plugins/myprofiles/myprofiles.php on line 30
