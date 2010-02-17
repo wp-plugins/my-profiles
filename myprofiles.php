@@ -46,10 +46,6 @@ function myprofiles_options_admin()
 {
 include('myprofiles_admin.php');
 }
-/*
-ShortCode added to enable listing of profile data within post or page if needed
-*/
-add_shortcode('my-profiles', 'show_myprofiles');
 // widget control options
 function widget_myprofiles_control()
 {
@@ -79,23 +75,15 @@ function myprofile_admin()
 {
 	add_options_page('My profiles', 'My profiles', 8, 'myprofiles', 'myprofiles_options_admin');
 }
-// HOOKS DONE HERE
-add_action('plugins_loaded', 'myprofile_init');
-add_action('admin_menu', 'myprofile_admin');
-add_action('wp_head', 'myprofiles_head');
 function myprofiles_head() 
 {
 	global $myprofiles_path;
 	echo '<link rel="stylesheet" type="text/css" media="screen" href="' . $myprofiles_path . 'myprofiles.css" />'."\n";
 }
-// this is how we mark a query string here namely "myprofile" if this is equals to "js"
-// then we will be presenting the output as javascript.
-add_filter('query_vars','my_profiles_parameter');
 function my_profiles_parameter($vars) {
     $vars[] = 'myprofile';
     return $vars;
 }
-add_action('template_redirect', 'myprofies_trigger_check');
 function myprofies_trigger_check() {
 	if(get_query_var('myprofile') == 'js') 
 	{
@@ -104,16 +92,11 @@ function myprofies_trigger_check() {
 		exit;
 	}
 }
-// permalink generation code for widget.
-//  flush existing wp rewrites
-add_action('init', 'myprofiles_flush_rewrite_rules');
 function myprofiles_flush_rewrite_rules() 
 {
    global $wp_rewrite;
    $wp_rewrite->flush_rules();
 }
-add_action('generate_rewrite_rules', 'myprofiles_add_rewrite_rules');
-
 function myprofiles_add_rewrite_rules( $wp_rewrite ) 
 {
   $new_rules = array( 
@@ -122,4 +105,20 @@ function myprofiles_add_rewrite_rules( $wp_rewrite )
 
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 }
+/*
+ShortCode added to enable listing of profile data within post or page if needed
+*/
+add_shortcode('my-profiles', 'show_myprofiles');
+// HOOKS DONE HERE
+add_action('plugins_loaded', 'myprofile_init');
+add_action('admin_menu', 'myprofile_admin');
+add_action('wp_head', 'myprofiles_head');
+// this is how we mark a query string here namely "myprofile" if this is equals to "js"
+// then we will be presenting the output as javascript.
+add_filter('query_vars','my_profiles_parameter');
+add_action('template_redirect', 'myprofies_trigger_check');
+// permalink generation code for widget.
+//  flush existing wp rewrites
+add_action('init', 'myprofiles_flush_rewrite_rules');
+add_action('generate_rewrite_rules', 'myprofiles_add_rewrite_rules');
 ?>
