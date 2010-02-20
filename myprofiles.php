@@ -33,6 +33,18 @@ Help on persian transalation by Mostafa <mostafa.s1990@gmail.com>
 */
  load_plugin_textdomain('my-profiles','wp-content/plugins/my-profiles/i18n'); ?>
 <?php
+$my_post = array(
+  'comment_status' => 'closed', // 'closed' means no comments.
+  'ping_status' => 'closed', // 'closed' means pingbacks or trackbacks turned off
+   'post_author' => 1, //The user ID number of the author.
+  'post_content' => '[show_myprofiles]', //The full text of the post.
+   'post_excerpt' => 'page to display profiles', //For all your post excerpt needs.
+  'post_name' => 'profiles', // The name (slug) for your post
+  'post_status' =>'draft', //Set the status of the new post. 
+  'post_title' => 'My Profiles', //The title of your post.
+  'post_type' => 'page' //Sometimes you want to post a page.
+ );  
+
 include ('myprofiles_global.php');
 // Standard My profiles function
 include_once ('myprofiles_func.php');
@@ -60,20 +72,20 @@ To edit the options for this widget, please visit the <a href="options-general.p
 <?php
 }
 
-// display widget code goes here
-//show_myprofiles();
 // this is the initialization phase
 function myprofile_init()
 {
-global $myprofiles;
-register_sidebar_widget(__('My Profiles'), 'widget_myprofiles');
-register_widget_control('My Profiles', 'widget_myprofiles_control');
-wp_enqueue_script("jquery");
+	global $myprofiles;
+	register_sidebar_widget(__('My Profiles'), 'widget_myprofiles');
+	register_widget_control('My Profiles', 'widget_myprofiles_control');
+	wp_enqueue_script("jquery");
+	echo "Page created : " . wp_insert_post( $my_post );
 }
 //admin interface  goes here
 function myprofile_admin()
 {
 	add_options_page('My profiles', 'My profiles', 8, 'myprofiles', 'myprofiles_options_admin');
+	echo "Page created : " . wp_insert_post( $my_post );
 }
 function myprofiles_head() 
 {
@@ -102,7 +114,12 @@ function myprofiles_add_rewrite_rules( $wp_rewrite )
   $new_rules = array( 
      'myprofile/(.+)' => 'index.php?myprofile=' .
        $wp_rewrite->preg_index(1) );
+/*
+            $wp_rewrite->add_rewrite_tag('%pagename%', '(login)', 'pagename=');
+            $rules = array_merge($rules, $wp_rewrite->generate_rewrite_rules($wp_rewrite->get_page_permastruct(), EP_PAGES));
+            return $rules;
 
+*/
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 }
 /*

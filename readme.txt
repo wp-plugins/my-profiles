@@ -105,6 +105,7 @@ sample script that you should use on other sites.
 1. added support for wordpress tag.
 2. added support for placing external widget.
 3. added few more sites in the list. 
+4. admin section to enable external widget support.
 
 = Version 0.6 =
 
