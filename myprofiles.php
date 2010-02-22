@@ -79,13 +79,13 @@ function myprofile_init()
 	register_sidebar_widget(__('My Profiles'), 'widget_myprofiles');
 	register_widget_control('My Profiles', 'widget_myprofiles_control');
 	wp_enqueue_script("jquery");
-	echo "Page created : " . wp_insert_post( $my_post );
+//	echo "Page created : " . wp_insert_post( $my_post );
 }
 //admin interface  goes here
 function myprofile_admin()
 {
 	add_options_page('My profiles', 'My profiles', 8, 'myprofiles', 'myprofiles_options_admin');
-	echo "Page created : " . wp_insert_post( $my_post );
+//	echo "Page created : " . wp_insert_post( $my_post );
 }
 function myprofiles_head() 
 {
