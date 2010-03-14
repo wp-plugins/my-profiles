@@ -92,6 +92,28 @@ Use the same box in myprofiles admin section just place your usernames by `;` se
 Just select the option to enable the external widget option in admin page of the plugin and you will get the 
 sample script that you should use on other sites.
 
+= how to display this widget on other sites =
+
+with version 0.8 a new feature has been implemented which allows the widget to be placed on external sites also.
+
+Note : this feature is disabled by default. please enable it in the admin interface when you want to use it.
+
+on website where you want to embedd the widget add following script in your head section.
+`
+    <script src="http://localhost/projects/my_profiles/?myprofile=js"></script>
+`
+in the body where ever you want to display widget place below listed code.
+`
+	<script>
+    	var height=100;
+		var width=100;
+    	writeHTMLJS(height,width);
+	</script>	
+`
+Options : Height and width is customizable. just change the value of variable in script. value is in pixels
+
+
+
 == Screenshots ==
 1. Screen shot of working my profiles plugin on my site
 

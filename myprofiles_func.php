@@ -48,7 +48,15 @@ function myprofiles_js()
 global $myprofiles_path; 
 //echo $myprofiles_path;
 ?>
-function writeHTMLJS(){
+function writeHTMLJS(height,width){
+if (width == null)
+{
+    width=200;
+}
+if (height == null)
+{
+    height=100;
+}
 document.write("<link rel=\"stylesheet\" type=\"text\/css\" media=\"screen\" href=\"<?php echo $myprofiles_path; ?>myprofiles.css\" \/>");
 document.write("<div id=\"myprofiles\" style='width:" + width + "px;height:" + height + "px'>");
 document.write("	<div id=\"myprofiles_head\">		");
