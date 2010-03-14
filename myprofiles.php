@@ -97,20 +97,20 @@ function my_profiles_parameter($vars) {
     return $vars;
 }
 function myprofies_trigger_check() {
+ if (get_query_var('myprofile') == 'js')
+ {
     if (get_option('myprofiles_jscript_check'))
-    {
-	    if(get_query_var('myprofile') == 'js') 
-	    {
-		    header('Content-type: application/x-javascript');
-		    myprofiles_js();
-		    exit;
-	    }
-    }	
-    else
-    {
+	{
+		header('Content-type: application/x-javascript');
+	    myprofiles_js();
+	    exit;	
+	}
+	else
+	{
         echo "Option not enabled yet";
-        exit;
-    }
+        exit;		
+	}
+ }
 }
 function myprofiles_flush_rewrite_rules() 
 {
