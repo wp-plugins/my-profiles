@@ -96,7 +96,7 @@ document.write("	");
 	}
 	$count_profile = 0;
 */
-show_myprofiles('h','js')
+show_myprofiles('h','js');
 ?>
 document.write("</div>");
 document.write("<br /><span>&nbsp;</span><br />");

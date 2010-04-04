@@ -3,7 +3,7 @@
 Plugin Name: My profiles
 Author URI: http://anantshri.info
 Plugin URI: http://anantshri.info/index.php?page=wpprofiles
-Version: v0.6
+Version: v0.7
 Author: Anant Shrivastava
 Description: this plugin provides a sleek and easy way to list all your profiles and to let others connect with you. So activate and visit the <a href="options-general.php?page=myprofiles">Settings Page</a>.
 */
@@ -122,18 +122,22 @@ function myprofiles_add_rewrite_rules( $wp_rewrite )
   $new_rules = array( 
      'myprofile/(.+)' => 'index.php?myprofile=' .
        $wp_rewrite->preg_index(1) );
-/*
-            $wp_rewrite->add_rewrite_tag('%pagename%', '(login)', 'pagename=');
-            $rules = array_merge($rules, $wp_rewrite->generate_rewrite_rules($wp_rewrite->get_page_permastruct(), EP_PAGES));
-            return $rules;
-
-*/
   $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+}
+
+function myprofiles_shortcode($atts)
+{
+    ob_start();
+    show_myprofiles($atts);
+    $output_string=ob_get_contents();
+    ob_end_clean();
+    return $output_string;
 }
 /*
 ShortCode added to enable listing of profile data within post or page if needed
 */
-add_shortcode('my-profiles', 'show_myprofiles');
+//add_shortcode('my-profiles', 'show_myprofiles');
+add_shortcode('my-profiles', 'myprofiles_shortcode');
 // HOOKS DONE HERE
 add_action('plugins_loaded', 'myprofile_init');
 add_action('admin_menu', 'myprofile_admin');

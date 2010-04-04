@@ -47,8 +47,16 @@ So go ahead and grab it to start flaunting your profiles on your very own blog.
 
 = What if my site is missing =
 
-In case you find that your favorite site is missing all you need is
+In case you find that your favorite site is missing 
 
+Option 1
+
+add a comment in http://blog.anantshri.info/projects/my-profiles/
+
+Option 2
+for those who dare to play with the code.
+
+all you need is
 * your profile URL
 * img in 16 x 16 pixel format.
 
@@ -58,16 +66,16 @@ Just at the end add your site details
 
 Example
 `
-	"<website_name>" => Array(
-	    "name" => 'myprofiles_<website_name>',
-		"favicon" => 'images/<website_name>.png',
-		"url" => '<profile_url>',
+	"website_name" => Array(
+	    "name" => 'myprofiles_website_name',
+		"favicon" => 'images/website_name.png',
+		"url" => 'profile_url',
 	)
 `
 
-Just Replace <website_name> with your website name <br /> 
+Just Replace website_name with your website name <br /> 
 place 16 x 16 pixel large image of website "preferably FAVICON" in `plugins/myprofiles/img` folder.<br /> 
-Just replace <profile_url> with your personal url but change your nickname / profile_number to `NAME`<br /> 
+Just replace profile_url with your personal url but change your nickname / profile_number to `NAME`<br /> 
 and voila your new profile is in the admin interface just add your nick and you are good to go<br /> 
 <br /> 
 example for profile_url => `http://www.twitter.com/anantshri` will be converted to `http://www.twitter.com/NAME`
@@ -94,13 +102,13 @@ sample script that you should use on other sites.
 
 = how to display this widget on other sites =
 
-with version 0.8 a new feature has been implemented which allows the widget to be placed on external sites also.
+with version 0.7 a new feature has been implemented which allows the widget to be placed on external sites also.
 
 Note : this feature is disabled by default. please enable it in the admin interface when you want to use it.
 
 on website where you want to embedd the widget add following script in your head section.
 `
-    <script src="http://localhost/projects/my_profiles/?myprofile=js"></script>
+    <script src="http://your_blog_name_here/?myprofile=js"></script>
 `
 in the body where ever you want to display widget place below listed code.
 `
@@ -113,7 +121,6 @@ in the body where ever you want to display widget place below listed code.
 Options : Height and width is customizable. just change the value of variable in script. value is in pixels
 
 
-
 == Screenshots ==
 1. Screen shot of working my profiles plugin on my site
 
@@ -124,7 +131,7 @@ Options : Height and width is customizable. just change the value of variable in
 
 = Version 0.7 =
 
-1. added support for wordpress tag.
+1. added support for wordpress shortcode.
 2. added support for placing external widget.
 3. added few more sites in the list. 
 4. admin section to enable external widget support.
@@ -139,4 +146,4 @@ Options : Height and width is customizable. just change the value of variable in
 
 = Version 0.5 =
 
-Initial Release
+ Initial Release
